@@ -30,7 +30,7 @@ technology-2026/
 
 | ファイル | 内容 |
 |---|---|
-| `README.md` | 企画のコンセプト、概要、目的などを記載 |
+| `modpack.md` | 企画のコンセプト、概要、目的などを記載 |
 
 ### 3. ファイル・ディレクトリ構成
 
@@ -38,7 +38,7 @@ KubeJSスクリプト、設定ファイル、リソースなどは、**Minecraft
 
 特にKubeJSについては、`server_scripts`、`client_scripts`、`startup_scripts`などの内部ディレクトリを企画ディレクトリ直下に分離せず、必ず`kubejs/`を起点として配置してください。
 
-**正しい構成例：**
+例
 
 ```text
 create-2026-03/
@@ -51,17 +51,6 @@ create-2026-03/
 │   └── assets/
 └── config/
     └── example.toml
-```
-
-**誤った構成例：**
-
-```text
-create-2026-03/
-├── README.md
-├── server_scripts/
-│   └── recipes.js
-├── startup_scripts/
-└── client_scripts/
 ```
 
 Modpack内で使用するファイルは、できる限り実際のMinecraft環境へそのまま配置できるディレクトリ構成を維持してください。
@@ -94,3 +83,7 @@ Modpack内で使用するファイルは、できる限り実際のMinecraft環�
 本リポジトリに含まれる、あっきーサーバーが著作権を保有する独自のスクリプト、設定ファイルおよびその他のオリジナルコンテンツは、特に明記されていない限り、Mozilla Public License 2.0 (MPL-2.0) の下で公開されます。
 
 第三者が開発したMod、リソースパック、その他のコンテンツには、それぞれの権利者が定めるライセンスが適用され、本リポジトリのライセンス対象には含まれません。
+
+ライセンスの詳細については、[LICENSE](LICENSE)を参照してください。
+
+Copyright © 2026 あっきー and contributors.
