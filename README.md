@@ -31,6 +31,7 @@ technology-2026/
 | ファイル | 内容 |
 |---|---|
 | `modpack.md` | 企画のコンセプト、概要、目的などを記載 |
+| `modpack.zip` (または`企画名.zip`) | CurseForge Modpack形式でエクスポートされたzipファイル |
 
 ### 3. ファイル・ディレクトリ構成
 
