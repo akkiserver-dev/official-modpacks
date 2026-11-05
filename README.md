@@ -38,11 +38,12 @@ KubeJSスクリプト、設定ファイル、リソースなどは、**Minecraft
 
 特にKubeJSについては、`server_scripts`、`client_scripts`、`startup_scripts`などの内部ディレクトリを企画ディレクトリ直下に分離せず、必ず`kubejs/`を起点として配置してください。
 
-例
+例：
 
 ```text
 create-2026-03/
 ├── README.md
+├── create-2026-03.zip
 ├── kubejs/
 │   ├── server_scripts/
 │   │   └── recipes.js
