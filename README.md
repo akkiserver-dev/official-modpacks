@@ -42,7 +42,7 @@ KubeJSスクリプト、設定ファイル、リソースなどは、**Minecraft
 
 ```text
 create-2026-03/
-├── README.md
+├── modpack.md
 ├── create-2026-03.zip
 ├── kubejs/
 │   ├── server_scripts/
