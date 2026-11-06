@@ -1,0 +1,89 @@
+#--- 升力 / Lift ---
+#单个气球的升力容量 (kpg)。总升力 = 此值 × 气球数量；仅当 总升力 ≥ 结构总质量 时才可起飞。
+#Lift capacity per balloon (kpg). Total lift = this × balloon count; the craft can only
+#fly when total lift >= total structure mass (otherwise 'insufficient lift').
+# Default: 100
+# Range: 0 ~ 10000
+liftForce = 100
+#目标上升速度 (m/s)。按住上升 (空格) 时结构伺服到此垂直速度。上限 100。
+#Target ascend speed (m/s). Holding ascend (Space) servos the craft to this climb rate. Max 100.
+# Default: 5
+# Range: 0 ~ 100
+ascendSpeed = 5
+#目标下降速度 (m/s)。按住下降 (V) 时结构伺服到此下沉速度。上限 100。
+#Target descend speed (m/s). Holding descend (V) servos the craft to this sink rate. Max 100.
+# Default: 5
+# Range: 0 ~ 100
+descendSpeed = 5
+#目标前进速度 (m/s)。按住 W 时加速到此水平速度。
+#Target forward speed (m/s). Hold W to reach this horizontal speed.
+# Default: 10
+# Range: 0 ~ 1000
+forwardSpeed = 10
+#目标后退速度 (m/s)。按住 S 时加速到此水平速度。
+#Target backward speed (m/s). Hold S to reach this horizontal speed.
+# Default: 10
+# Range: 0 ~ 1000
+backwardSpeed = 10
+#转向速度 (°/s)。按住 A/D 时旋转到此角速度。
+#Turn speed (degrees/s). Hold A/D to rotate at this angular velocity.
+# Default: 30.0
+# Range: 0.0 ~ 360.0
+turnSpeed = 30.0
+#左转速度 (°/s)。按住 A 时旋转到此角速度。
+#Left turn speed (degrees/s). Hold A to rotate at this angular velocity.
+# Default: 30
+# Range: 0 ~ 360
+turnLeftSpeed = 30
+#右转速度 (°/s)。按住 D 时旋转到此角速度。
+#Right turn speed (degrees/s). Hold D to rotate at this angular velocity.
+# Default: 30
+# Range: 0 ~ 360
+turnRightSpeed = 30
+#--- 陀螺仪 / Gyroscope ---
+#目标自然频率 (rad/s)。值越大修正越迅猛。
+#Target natural frequency (rad/s). Higher = snappier correction.
+# Default: 3.0
+# Range: 0.1 ~ 10.0
+gyroOmega = 3.0
+#阻尼比。0.6=弹性(推荐), 0.9=平衡, 1.0=临界阻尼。
+#Damping ratio. Lower = more P authority. 0.6 recommended for balloon.
+# Default: 0.6
+# Range: 0.1 ~ 2.0
+gyroDamping = 0.6
+#每个气球提供的陀螺仪容量 (kg*m²)。结构总转动惯量除以总容量 = 有效增益比例。
+#Gyro authority per balloon (kg*m²). Total inertia / total capacity = effective gain scale.
+# Default: 5000.0
+# Range: 10.0 ~ 100000.0
+gyroAuthority = 5000.0
+#是否启用陀螺仪姿态稳定。关闭后结构不自动回正。
+#Enable gyro stabilization. Turn off to disable auto-leveling.
+gyroEnabled = true
+#陀螺仪整体强度系数。>10 时每多 1 增加一个虚拟陀螺仪，上限 10000。
+#Overall gyro strength. >10 adds virtual gyros. Max 10000.
+# Default: 10.0
+# Range: 0.0 ~ 10010.0
+gyroStrength = 10.0
+#偏航阻尼。0=关。
+#Yaw damping. 0=off.
+# Default: 0.8
+# Range: 0.0 ~ 10000.0
+gyroYawDamping = 0.8
+#--- 调试 / Debug ---
+#调试日志级别：OFF=关闭, SIMPLE=简要, DETAILED=完整物理数据, DIAGNOSTIC: 逐帧诊断
+#Debug log: OFF=disabled, SIMPLE=basic, DETAILED=full physics, DIAGNOSTIC=per-frame diagnostics
+#Allowed Values: OFF, SIMPLE, DETAILED, DIAGNOSTIC
+logLevel = "SIMPLE"
+#是否自动维护日志目录（create-balloon-logs）：超期日志删除 + 旧日志 gzip 压缩。目录从不清洗会持续膨胀（曾达 840 文件 / 661 MB）。
+#Auto-maintain the create-balloon-logs folder: delete expired logs and gzip old ones (that directory grows unbounded).
+logKeepEnabled = true
+#保留最近多少个未压缩的完整日志（debug-*.log）；超出的按修改时间压缩为 debug-*.log.gz（内容保留，体积大幅减小）。设 0 = 全部压缩归档。
+#How many recent debug-*.log files to keep uncompressed; older ones are gzipped to debug-*.log.gz (kept, much smaller). 0 = compress all.
+# Default: 100
+# Range: 0 ~ 100000
+logKeepFiles = 100
+#删除超过该天数的旧日志（含 debug-*.log 与 debug-*.log.gz，按修改时间）。默认 14 天。设 0 = 永不删除（只压缩）。
+#Delete log files older than this many days (debug-*.log and debug-*.log.gz, by mtime). Default 14. 0 = never delete (compress only).
+# Default: 14
+# Range: 0 ~ 3650
+logPurgeDays = 14
