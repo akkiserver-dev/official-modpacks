@@ -1,0 +1,21 @@
+{
+  "defaultTimer": 180,
+  "regenSpeedModifier": 1.0,
+  "regenDelay": 200,
+  "respawnGracePeriod": 300,
+  "keepFoodOnDeath": false,
+  "speedBoost": 0.2,
+  "startingHealth": 3,
+  "maxHealth": 30,
+  "maxSlots": 3,
+  "eatAgainPercentage": 0.2,
+  "drinkSlotFoodEffectivenessBonus": 0.1,
+  "passTicksDuringNight": true,
+  "convertHungerCosts": true,
+  "hungerSecondsPerPoint": 60.0,
+  "exhaustionSecondsPerPoint": 10.0,
+  "hungerConsumptionExponent": 0.5,
+  "hungerConsumesDrinks": true,
+  "foodBlacklist": [],
+  "foodConfigs": {}
+}
