@@ -1,0 +1,182 @@
+#Gunsteel Gatling: fire delay is at full spin
+[gunsteel_gatling]
+	#Damage per shot
+	# Default: 7.0
+	# Range: 0.0 ~ 10000.0
+	damage = 7.0
+	#Spread in degrees
+	# Default: 3.5
+	# Range: 0.0 ~ 90.0
+	spread = 3.5
+	#Ticks between shots (20 ticks = 1 second)
+	# Default: 2
+	# Range: 1 ~ 1200
+	fireDelay = 2
+	#Rounds per magazine
+	# Default: 60
+	# Range: 1 ~ 10000
+	magazineCapacity = 60
+	#Reload time in ticks (20 ticks = 1 second)
+	# Default: 60
+	# Range: 1 ~ 1200
+	reloadTime = 60
+	#Fraction (0-1) of walking speed lost while held
+	# Default: 0.2
+	# Range: 0.0 ~ 1.0
+	movementPenalty = 0.2
+	#Modifier slots. When lowered, modifiers in the removed slots go back to the player when they next open the gun's modifier menu
+	# Default: 8
+	# Range: 1 ~ 24
+	modifierSlots = 8
+	#Extra ticks between shots from rest, fading as the barrels spin up
+	# Default: 6
+	# Range: 0 ~ 100
+	spinUpDelay = 6
+	#Shots to reach full fire rate
+	# Default: 10
+	# Range: 1 ~ 100
+	spinUpShots = 10
+
+#Gunsteel Crucible: damage is per glob, at full strength within 2 blocks
+[gunsteel_crucible]
+	#Damage per shot
+	# Default: 7.0
+	# Range: 0.0 ~ 10000.0
+	damage = 7.0
+	#Spread in degrees
+	# Default: 6.0
+	# Range: 0.0 ~ 90.0
+	spread = 6.0
+	#Ticks between shots (20 ticks = 1 second)
+	# Default: 2
+	# Range: 1 ~ 1200
+	fireDelay = 2
+	#Rounds per magazine
+	# Default: 50
+	# Range: 1 ~ 10000
+	magazineCapacity = 50
+	#Reload time in ticks (20 ticks = 1 second)
+	# Default: 60
+	# Range: 1 ~ 1200
+	reloadTime = 60
+	#Fraction (0-1) of walking speed lost while held
+	# Default: 0.15
+	# Range: 0.0 ~ 1.0
+	movementPenalty = 0.15
+	#Modifier slots. When lowered, modifiers in the removed slots go back to the player when they next open the gun's modifier menu
+	# Default: 8
+	# Range: 1 ~ 24
+	modifierSlots = 8
+	#Globs of molten metal per shot
+	# Default: 3
+	# Range: 1 ~ 20
+	globsPerShot = 3
+	#Seconds a hit target burns
+	# Default: 3
+	# Range: 0 ~ 60
+	burnSeconds = 3
+
+#Gunsteel Congreve: damage is the rocket's hit, and the burst's at its center
+[gunsteel_congreve]
+	#Damage per shot
+	# Default: 80.0
+	# Range: 0.0 ~ 10000.0
+	damage = 80.0
+	#Spread in degrees
+	# Default: 1.5
+	# Range: 0.0 ~ 90.0
+	spread = 1.5
+	#Ticks between shots (20 ticks = 1 second)
+	# Default: 10
+	# Range: 1 ~ 1200
+	fireDelay = 10
+	#Rounds per magazine
+	# Default: 1
+	# Range: 1 ~ 10000
+	magazineCapacity = 1
+	#Reload time in ticks (20 ticks = 1 second)
+	# Default: 70
+	# Range: 1 ~ 1200
+	reloadTime = 70
+	#Fraction (0-1) of walking speed lost while held
+	# Default: 0.15
+	# Range: 0.0 ~ 1.0
+	movementPenalty = 0.15
+	#Modifier slots. When lowered, modifiers in the removed slots go back to the player when they next open the gun's modifier menu
+	# Default: 8
+	# Range: 1 ~ 24
+	modifierSlots = 8
+	#Bullets packed into each rocket on reload
+	# Default: 8
+	# Range: 0 ~ 64
+	bulletsPerRocket = 8
+	#Burst radius in blocks; each Blackpowder Charge modifier adds 1. Block damage (with Breach) stays the same whatever the damage
+	# Default: 4
+	# Range: 3 ~ 16
+	blastRadius = 4
+
+#Modifiers. Fractions are written as 0.5 for 50%
+[modifiers]
+
+	#Drum Magazine: each one fitted multiplies these again
+	[modifiers.drum_magazine]
+		#Extra magazine capacity, as a fraction (rounded up)
+		# Default: 0.5
+		# Range: 0.0 ~ 10.0
+		capacityBonus = 0.5
+		#Fraction of reload speed lost
+		# Default: 0.2
+		# Range: 0.0 ~ 0.9
+		reloadPenalty = 0.2
+
+	#Rifled Barrel: each one fitted adds these again
+	[modifiers.rifled_barrel]
+		#Extra damage per block the shot has flown, as a fraction
+		# Default: 0.02
+		# Range: 0.0 ~ 1.0
+		damagePerBlock = 0.02
+		#Blocks of flight that count towards the bonus
+		# Default: 30
+		# Range: 1 ~ 256
+		maxDistance = 30
+		#Fraction of reload speed lost
+		# Default: 0.15
+		# Range: 0.0 ~ 0.9
+		reloadPenalty = 0.15
+
+	#Powder Ram: each one fitted adds its bonus and its charge time again
+	[modifiers.powder_ram]
+		#Extra damage when fully charged, as a fraction
+		# Default: 0.5
+		# Range: 0.0 ~ 10.0
+		damageBonus = 0.5
+		#Ticks without shooting to charge fully (20 ticks = 1 second)
+		# Default: 30
+		# Range: 1 ~ 1200
+		chargeTime = 30
+
+	#Reflex Sight: only one per gun counts
+	[modifiers.reflex_sight]
+		#Fraction of spread removed while aiming
+		# Default: 0.3
+		# Range: 0.0 ~ 1.0
+		spreadReduction = 0.3
+		#Fraction of camera recoil removed while aiming
+		# Default: 0.3
+		# Range: 0.0 ~ 1.0
+		recoilReduction = 0.3
+		#Walking speed while aiming, as a fraction of normal (using an item is 0.2)
+		# Default: 0.6
+		# Range: 0.0 ~ 1.0
+		aimedSpeed = 0.6
+
+	#Portable Tripod: only one per gun counts
+	[modifiers.portable_tripod]
+		#Fraction of spread removed while mounted
+		# Default: 0.75
+		# Range: 0.0 ~ 1.0
+		spreadReduction = 0.75
+		#Fraction of camera recoil removed while mounted
+		# Default: 0.75
+		# Range: 0.0 ~ 1.0
+		recoilReduction = 0.75
