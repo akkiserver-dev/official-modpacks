@@ -1,0 +1,5 @@
+#Rendering.
+[rendering]
+	#Draw guards, recruits and workers as their MCA persons where the server allows it.
+	#Off: always use each mod's own renderer. Affects only what this client sees.
+	mcaAppearance = true

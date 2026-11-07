@@ -1,0 +1,15 @@
+[progression]
+	#Enable individual disc pressing and full-album pressing. When false, blank albums become empty collector sleeves instead.
+	#Restart or reload server datapacks after changing this setting.
+	stonecuttingEnabled = true
+	#Add Festive Records discs to unopened exploration chests in the Overworld.
+	chestLootEnabled = true
+	#Multiplier for chest discovery chances. 1.0 uses the normal per-structure chances.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	lootChanceMultiplier = 1.0
+
+[playback]
+	#Skip measured leading silence on selected records. False restores every original intro.
+	#The server selects the playback mode for everyone. Restart the server or reopen the world after changing this setting.
+	shortenQuietIntros = true
