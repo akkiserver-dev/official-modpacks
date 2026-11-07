@@ -31,13 +31,15 @@ technology-2026/
 | ファイル | 内容 |
 |---|---|
 | `modpack.md` | 企画のコンセプト、概要、目的などを記載 |
-| `modpack.zip` (または`企画名.zip`) | CurseForge Modpack形式でエクスポートされたzipファイル |
+| `modpack_yy-mm_hh-mm.zip` (または`企画名_yy-mm_hh-mm.zip`) | CurseForge Modpack形式でエクスポートされたzipファイル |
+
+`modpack_11-07_19-43.zip`のように、11月7日の19時43分にエクスポートされたものとしてバージョン管理が行えるよう**必ず**その時の日付・時刻を記録すること。
 
 ### 3. ファイル・ディレクトリ構成
 
 KubeJSスクリプト、設定ファイル、リソースなどは、**Minecraftインスタンスのルートディレクトリを基準とした構成**で配置してください。
 
-特にKubeJSについては、`server_scripts`、`client_scripts`、`startup_scripts`などの内部ディレクトリを企画ディレクトリ直下に分離せず、必ず`kubejs/`を起点として配置してください。
+特にKubeJSについては、`server_scripts`、`client_scripts`、`startup_scripts`などの内部ディレクトリを企画ディレクトリ直下に分離せず、**必ず**`kubejs/`を起点として配置してください。
 
 例：
 

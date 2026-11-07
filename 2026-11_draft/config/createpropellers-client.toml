@@ -1,0 +1,23 @@
+#.
+#Play a looping engine sound for spinning propellers
+propellerSounds = true
+#.
+#Volume multiplier for propeller sounds
+# Default: 1.0
+# Range: 0.0 ~ 2.0
+propellerVolume = 1.0
+#.
+#Propellers further away than this many blocks (measured in the world, also for propellers on ships) stay silent. Sounds stop 8 blocks beyond it so they do not flicker on and off
+# Default: 48.0
+# Range: 8.0 ~ 128.0
+propellerSoundRange = 48.0
+#.
+#At most this many propeller sounds play at once, the nearest propellers win. Every sound takes one of the sound engine's limited channels
+# Default: 12
+# Range: 1 ~ 64
+maxPropellerSounds = 12
+#.
+#Wide propellers spawn proportionally more airflow particles so their discs do not look empty. This is the largest multiplier compared to a small propeller (1 = never spawn more). Applies to propellers placed after the setting changed
+# Default: 4.0
+# Range: 1.0 ~ 8.0
+airflowParticleCap = 4.0

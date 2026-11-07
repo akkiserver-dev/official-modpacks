@@ -1,0 +1,8 @@
+#Dispatcher behavior limits
+[dispatcher]
+	#Maximum number of stations that can be queued per train.
+	#Prevents spam and runaway schedules.
+	#Default: 16
+	# Default: 16
+	# Range: 1 ~ 256
+	max_pending_stations = 16

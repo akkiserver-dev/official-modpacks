@@ -1,0 +1,71 @@
+#Limits
+[limits]
+	#Largest structure (in blocks) one sneak + right-click will glue or unglue.
+	#Any value up to 2147483647 is kept as written.
+	#Very large ships also need Create Aeronautics' own limit raised:
+	#  <world>/serverconfig/simulated-server.toml -> [assembly] maxBlocksMoved (default 128000)
+	#and Create's for its own contraptions:
+	#  <world>/serverconfig/create-server.toml -> [kinetics] maxBlocksMoved (default 2048)
+	# Default: 1000000
+	# Range: > 1
+	maxShipBlocks = 1000000
+	#Most glue entities one sweep may place. Any value up to 2147483647 is kept as written.
+	# Default: 50000
+	# Range: > 1
+	maxGlueEntities = 50000
+	#Longest side of a single glue box, in blocks.
+	#Super Glue boxes are also kept within 32 wide and 16 tall: Create only looks for Super Glue within
+	#about 18 blocks of each block, so bigger boxes would leave parts of a build behind.
+	#Honey Glue boxes are also kept within Create Aeronautics' honeyGlueRange (48 by default).
+	# Default: 48
+	# Range: 2 ~ 48
+	maxGlueEdge = 48
+	#true: glue follows the exact shape of the build - boxes only ever cover the build's own blocks.
+	#false: boxes may also span the air inside and around the build, which needs fewer glue entities.
+	conformToBlocks = true
+
+#How the structure is found
+[detection]
+	#true: leave the natural world out - the ground, sea bed, trees and open water a build touches are
+	#not glued. Natural blocks that are part of the build (a stone hull, log decks, a dirt planter, a
+	#floating rock) are still glued, however big the build.
+	#false: glue every solid block connected to the one you click, natural or not. Only use this for
+	#builds that touch nothing but air, water and their own blocks.
+	detectTerrain = true
+	#Also connect blocks that only touch along an edge, and glue them together (Create Aeronautics
+	#assembles those). Blocks touching only at a corner can never be glued together.
+	connectDiagonally = true
+	#Remember natural blocks placed by players, so they are always glued even where they sit on the
+	#same kind of terrain (e.g. a stone build on a stone mountain).
+	trackPlacedBlocks = true
+	#Glue plants, snow, water and other fluids that sit on the structure (a pool or garden on deck).
+	#Ocean water, rivers, lakes and plants growing on the ground are never glued.
+	includeNaturalCover = true
+	#Largest connected patch of water/plants that can still count as part of the structure.
+	# Default: 4096
+	# Range: > 0
+	maxNaturalPocket = 4096
+	#How far (in blocks) water/plants may reach sideways or below the structure and still be glued.
+	# Default: 1
+	# Range: 0 ~ 64
+	hullPadding = 1
+
+#Behaviour
+[general]
+	#Use 1 durability of the glue item per sweep (never in creative).
+	consumeGlue = true
+	#Milliseconds of server time per tick spent on sweeps. Small ships finish instantly;
+	#huge ones are spread over several ticks so the server never stalls.
+	# Default: 8
+	# Range: 1 ~ 1000
+	workMillisPerTick = 8
+	#Show results above the hotbar (false = in chat).
+	actionBarFeedback = true
+	#Let Create Aeronautics find glue much faster when a Physics Assembler or Swivel Bearing assembles
+	#(the same blocks and glue, without freezing the server for seconds on big ships). Turn off only to
+	#rule Ship Glue out when looking into an assembly problem.
+	fastAeronauticsAssembly = true
+	#Used to update old defaults. Do not change.
+	# Default: 2
+	# Range: > 0
+	configVersion = 2

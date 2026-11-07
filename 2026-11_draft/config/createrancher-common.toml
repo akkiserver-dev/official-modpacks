@@ -1,0 +1,36 @@
+#Stress impact of the Mechanical Herder, in SU per RPM.
+# Default: 4.0
+# Range: 0.0 ~ 1024.0
+mechanicalHerderStressImpact = 4.0
+#Stress impact of the Mechanical Feeder, in SU per RPM.
+# Default: 2.0
+# Range: 0.0 ~ 1024.0
+mechanicalFeederStressImpact = 2.0
+#Stress impact of the Mechanical Shearer, in SU per RPM.
+# Default: 2.0
+# Range: 0.0 ~ 1024.0
+mechanicalShearerStressImpact = 2.0
+#Stress of the Mechanical Fisher, in SU. It's the same at any speed.
+# Default: 256.0
+# Range: 0.0 ~ 65536.0
+mechanicalFisherStress = 256.0
+#How long an animal takes to digest Alfalfa Pellets before it drops Dung, in ticks.
+# Default: 3600
+# Range: 1 ~ 1728000
+alfalfaDigestionTicks = 3600
+#How long a Campfire Grill takes to smoke an item, as a multiple of the smoker recipe's time.
+# Default: 2.0
+# Range: 0.01 ~ 100.0
+grillSmokingTimeMultiplier = 2.0
+#How long a Soul Campfire Grill takes to haunt an item, in ticks.
+# Default: 200
+# Range: 1 ~ 72000
+grillHauntingTicks = 200
+#How long a Cauldron Grill of lava takes to blast an item, in ticks.
+# Default: 200
+# Range: 1 ~ 72000
+grillBlastingTicks = 200
+#How long a heated Cauldron Grill of water takes to wash an item, in ticks.
+# Default: 200
+# Range: 1 ~ 72000
+grillWashingTicks = 200
