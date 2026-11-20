@@ -1,0 +1,16 @@
+{
+  "newWorlds": {
+    "villageStreets": true,
+    "signposts": true,
+    "waysideCamps": true,
+    "roadsideProps": 100,
+    "wheatFields": 100,
+    "revision": 2
+  },
+  "roadsInOldChunks": true,
+  "housePaths": true,
+  "playerSpeed": 20,
+  "mountSpeed": 30,
+  "noMonstersOnRoads": true,
+  "roadsOnMaps": true
+}

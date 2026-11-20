@@ -1,0 +1,41 @@
+[cameraoverhaul]
+	#Enable parry camera feedback. Requires CameraOverhaul.
+	enabled = true
+	#First-person camera intensity. 0 disables feedback.
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	intensity = 1.0
+	#Camera recoil duration in seconds.
+	# Default: 0.3
+	# Range: 0.1 ~ 1.0
+	duration_seconds = 0.3
+	#Third-person intensity relative to first person. 0 disables feedback.
+	# Default: 0.45
+	# Range: 0.0 ~ 1.0
+	third_person_scale = 0.45
+
+[controls]
+	#Trigger parry when releasing the attack key after holding it.
+	parry_on_release_attack = false
+	#Required attack-key hold time in ticks.
+	# Default: 3
+	# Range: 1 ~ 100
+	parry_release_attack_ticks = 3
+
+[sounds]
+	#Parry swing sound volume. Set to 0 to mute.
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	block_volume = 1.0
+	#Successful parry sound volume. Set to 0 to mute.
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	parry_volume = 1.0
+
+[visuals]
+	#Parry white flash strength. Peak opacity is twice this value. 0 disables it; damage changes duration only.
+	# Default: 0.15
+	# Range: 0.0 ~ 0.3
+	flash_opacity = 0.15
+	#Briefly hold the local parry animation on impact. Does not pause gameplay.
+	hit_stop = true

@@ -1,0 +1,23 @@
+[general]
+	#Parry cooldown in ticks. 0 disables the cooldown.
+	# Default: 60.0
+	# Range: 0.0 ~ 72000.0
+	parry_cooldown = 60.0
+	#Time available to parry after activation, in ticks.
+	# Default: 10.0
+	# Range: 1.0 ~ 72000.0
+	parry_window = 10.0
+	#Reset the parry cooldown on success.
+	refund_parry_cooldown = true
+	#Allowed item IDs or #tags. Leave empty to allow all items and empty hands.
+	parry_whitelist = []
+	#Shield parry cooldown as a percentage of the shield's cooldown.
+	# Default: 100.0
+	# Range: 0.0 ~ 10000.0
+	shield_cooldown_percent = 100.0
+	#Return damage to the attacker after a successful parry.
+	reflect_damage = false
+	#Reflected damage multiplier. 1.0 returns 100%.
+	# Default: 1.0
+	# Range: 0.0 ~ 1000.0
+	reflect_multiplier = 1.0
