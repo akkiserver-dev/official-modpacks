@@ -1,0 +1,13 @@
+#Radio broadcasting
+[broadcasting]
+	#If true, every dimension shares the same broadcast frequencies, so a
+	#station started in one dimension (e.g. the Overworld) can be heard from
+	#any other dimension (e.g. the Nether or the End) on the same frequency.
+	#If false, each dimension only hears stations broadcasting within it.
+	universalFrequencies = false
+
+#Portable radios
+[portableRadio]
+	#Whether a portable radio starts powered on when placed in the world.
+	#If false, placed radios default to off and must be toggled on by hand.
+	defaultPoweredWhenPlaced = true
