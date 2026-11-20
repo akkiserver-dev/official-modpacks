@@ -1,0 +1,25 @@
+[hunting]
+	#Add boss ingredients alongside the original boss loot. Requires a player kill.
+	ingredientDrops = true
+	#Multiplier for ingredient amounts. Original loot is unaffected.
+	# Default: 1
+	# Range: 1 ~ 8
+	dropMultiplier = 1
+	#Extra ingredients when the credited player's main-hand weapon is a knife.
+	# Default: 2
+	# Range: 0 ~ 16
+	knifeBonus = 2
+
+[cuisine]
+	#Enable the addon's custom meal effects and combat mechanics.
+	customMealEffects = true
+	#Multiplier for custom meal effect durations.
+	# Default: 1.0
+	# Range: 0.25 ~ 5.0
+	effectDurationScale = 1.0
+	#Multiplier for triggered culinary damage (normal weapon damage is unchanged).
+	# Default: 1.0
+	# Range: 0.0 ~ 3.0
+	procDamageScale = 1.0
+	#Allow offensive culinary procs to affect other players. Defensive effects still work.
+	pvpProcs = false
