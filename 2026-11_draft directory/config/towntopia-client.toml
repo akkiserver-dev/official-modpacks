@@ -1,0 +1,33 @@
+#How villagers' arms and legs look.
+#SMOOTH: they bend in a curve at the elbow and knee.
+#BLOCKY: straight boxes, like classic Minecraft.
+#Only changes what you see.
+#Allowed Values: SMOOTH, BLOCKY
+limbStyle = "SMOOTH"
+#Which set of villager skins you see.
+#CLASSIC: "Victorian English" on the Theme tab. Farmers, guards, archers,
+#lumberjacks, the Mayor and nomads in Victorian English clothes; other jobs keep their first look.
+#LONDON: "Victorian London": every job in sooty, foggy London dress, with its own 3D pieces.
+#MODERN: bright skins in today's clothes, by @Mello, the default.
+#RUSTIC: warm, worn, earthy skins, by @Neth, every job but the bard with its own 3D pieces.
+#A skin not painted yet keeps its CLASSIC look.
+#Only changes what you see.
+#Allowed Values: CLASSIC, LONDON, MODERN, RUSTIC
+villagerTheme = "MODERN"
+#Set by the game, leave it as it is. True once a skin set saved while CLASSIC was the
+#default has been moved to MODERN (once per file).
+modernDefaultApplied = true
+#Your own changes to the skin sets. Each set keeps its own: they are used while that set is in use.
+#One line per skin: "<set in use>: <skin> = <set its picture comes from>".
+#"rustic: guard_2 = classic" leaves Rustic's guard 2 out (those guards look Classic while Rustic is in use).
+#"classic: cook = rustic" brings Rustic's cook into Classic.
+#A skin is its file name without "dynamic_villagers_" (guard_2, farmer_female_1, architect, nitwit).
+#A line with an unknown set or skin is skipped. A set with no picture for a skin shows its Classic look.
+#Only changes what you see.
+skinChanges = []
+#Testing aid: show every nearby villager's name and what it is doing.
+#Set with /villagerstatus on|off. Only works for ops or with cheats on.
+showWorkStatus = false
+#Show one tip about TownTopia in chat a few seconds after you join a world.
+#Only you see it.
+showTips = true

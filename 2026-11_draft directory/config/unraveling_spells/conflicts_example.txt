@@ -1,0 +1,14 @@
+----- conflicts.json example -----
+If a player has learned modid:spell1, then modid:spell2 and modid:spell3 are blocked from being learned.
+However, if a player has learned modid:spell2 or modid:spell3, then modid:spell1 is blocked from being learned.
+{
+  "spells": {
+    "modid:spell1": [
+      "modid:spell2",
+      "modid:spell3"
+    ],
+    "modid:senbonzakura_kageyoshi": [
+      "modid:hihio_zabimaru"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+#Shows the names of spell and its descriptions if this spell is not learned
+show_spells_name = false
+#Shows spell guide descriptions in JEI information pages even if the spell is not learned
+show_jei_guide_spells = true
+#If enabled, AnimLib animations will be displayed in the GUI.
+#AnimLib is an optional client-side dependency.
+enabled_animations = true
+#The parameter is responsible for changing the appearance of the Magic lectern's GUI.
+#Allowed Values: CLASSIC, LARGER
+gui_type = "CLASSIC"

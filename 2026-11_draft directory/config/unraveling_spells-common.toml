@@ -1,0 +1,69 @@
+[general]
+	#Maximum number of learnable schools.
+	#Set to 0 to disable this limit.
+	# Default: 3
+	# Range: 0 ~ 100
+	max_schools = 3
+	#Allows the Eldritch school and its spells to be learned in the Magic Lectern.
+	#When enabled, the Eldritch Manuscript no longer opens its original research GUI.
+	enable_eldritch_school_learning = false
+	#Schools whose spells do not require learning.
+	#These schools are hidden from school selection and their spells can always be cast.
+	#Format: "namespace:path" (e.g., "irons_spellbooks:fire")
+	schools_without_learning = []
+	#List of spells that are learned by default.
+	#Format: "namespace:path" (e.g., "irons_spellbooks:fireball")
+	#These spells will be marked as learned and cannot be learned again.
+	learned_spells = []
+	#Default number of Spell Scrolls required to learn a spell.
+	#Eldritch spells use the same configured amount of Eldritch Manuscripts.
+	# Default: 1
+	# Range: 1 ~ 64
+	default_spell_scroll_cost = 1
+	#Per-spell learning cost overrides.
+	#Format: "namespace:spell_id=amount" (e.g., "irons_spellbooks:fireball=3").
+	#The amount must be between 1 and 64.
+	spell_scroll_costs = []
+
+[types]
+	#How schools are learned: DEFAULT requires selecting every available school slot; XP spends player experience.
+	#Allowed Values: DEFAULT, XP
+	school_price_type = "DEFAULT"
+
+	[types.xp]
+		#When "school_price_type" is XP, determines whether max_schools limits XP school learning.
+		#max_schools = 0 always disables the limit.
+		xp_respect_max_schools = false
+		#Base total XP cost of one school when "school_price_type" is XP.
+		#Set to 0 to make XP learning free.
+		# Default: 120
+		# Range: 0 ~ 1000000
+		xp_base_cost = 120
+		#Global multiplier applied to every XP school cost when "school_price_type" is XP.
+		# Default: 1.0
+		# Range: 0.0 ~ 100.0
+		price_xp_multiplier = 1.0
+		#Multiplier applied for every school the player already knows.
+		#1.0 keeps all schools at the same price; 1.25 makes each next school 25% more expensive.
+		# Default: 1.15
+		# Range: 0.0 ~ 100.0
+		xp_cost_growth = 1.15
+		#Minimum vanilla XP level required to buy a school with XP. 0 disables the level requirement.
+		# Default: 0
+		# Range: 0 ~ 1000000
+		xp_minimum_level = 0
+		#Allows selecting and buying several schools at once with XP.
+		#Their cost still increases in a deterministic order.
+		xp_allow_bulk_learning = true
+		#Optional per-school base XP cost overrides.
+		#Format: "namespace:school_id=amount" (e.g., "irons_spellbooks:fire=200").
+		#Overrides are still affected by "xp_cost_multiplier" and "xp_cost_growth".
+		school_xp_costs = []
+
+[additional]
+	#Custom text templates for spell descriptions in the Magic Lectern GUI.
+	#Format: "namespace:spell_id=template".
+	#Use {guide} to insert the spell's original guide text at that exact position.
+	#Example: "irons_spellbooks:fireball=Your text\n{guide}".
+	#A template without {guide} replaces the original guide completely.
+	unique_spell_info = []
