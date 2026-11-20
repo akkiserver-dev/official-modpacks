@@ -1,0 +1,55 @@
+#Luck will affect how often each quality will be tried for (10 luck * 0.25 multiplier -> 2.5 rolls, meaning 2 rolls and 50% chance for another)
+# Default: 0.25
+# Range: 0.0 ~ 10.0
+luck_multiplier = 0.25
+#The chance of quality crops dropping it's own quality (also affects other qualities)
+#Example for Gold (20 -> 0.6 / 0.03) the chances for all qualities would then be: 20 * 0.10 (iron) = 2 (100%) | 20 * 0.03 (gold) = 0.6 (60%) | 20 * 0.005 = 0.1 (10%)
+# Default: 0.6
+# Range: 0.0 ~ 1.0
+crop_target_chance = 0.6
+#Multiplier on top of the crop target chance
+# Default: 0.25
+# Range: 0.0 ~ 100.0
+seed_chance_multiplier = 0.25
+#Define multipliers to be applied per farmland on crops - Syntax: <index>;<crop>;<farmland>;<multiplier>
+#(the index defines the sequence in which they will be checked - the first matching one is applied)
+farmland_config = []
+
+[Crafting]
+	#Define recipes (namespace:path) which should not result in quality being rolled (e.g. when the items can be converted back and forth)
+	#This is not about keeping / retaining quality as a whole (e.g., in the case of storage-blocks - that is handled automatically + through the 'retain_quality_recipes' configuration)
+	no_quality_recipes = []
+	#Define recipes (namespace:path) which should result in the quality being applied to the result (only if all ingredients have the same quality)
+	retain_quality_recipes = ["minecraft:sugar_from_sugar_cane", "minecraft:sugar_from_honey_bottle", "minecraft:honey_bottle", "minecraft:honey_block", "minecraft:melon", "cratedelight:stacked_melons", "cratedelight:melons", "cratedelight:stacked_pumpkins", "cratedelight:pumpkins", "farmersdelight:stacked_melons", "farmersdelight:stacked_pumpkins", "vintagedelight:honey_jar_deconstruct", "vintagedelight:honey_jar", "herbalbrews:tea_leaf_crate", "herbalbrews:tea_leafs_from_crate"]
+	#Attempt to handle recipes involving seed items automatically (to avoid having to add all of them to the retain_quality_recipes config)
+	handle_seed_recipes = true
+	#Define recipes (namespace:path) which should be excluded from the automatic storage block detection
+	storage_recipe_blacklist = []
+
+[Animals]
+	#The base percentage of the (averaged) potential of the parents which gets passed on to the child
+	# Default: 0.6
+	# Range: 0.0 ~ 1.0
+	child_potential_base_percentage = 0.6
+	#A random value between 0 and this amount is added to the base percentage
+	# Default: 0.3
+	# Range: 0.0 ~ 1.0
+	child_potential_random_factor_amount = 0.3
+	#Multiplier on the potential gained through feeding a child (usually children can be fed more often)
+	# Default: 0.2
+	# Range: 0.0 ~ 1.0
+	child_potential_growth_multiplier = 0.2
+	#Defines how much the potential (0 - 1) of an animal increases the odds for quality (e.g. at 49 a potential of 1 results in a 50 times higher odds)
+	# Default: 49
+	# Range: 0 ~ 1000
+	animal_potential_impact = 49
+
+[Balance]
+	#The maximum quality level naturally generated crops (i.e. not planted by a player) can drop
+	# Default: 3
+	# Range: > 0
+	max_natural_harvest_quality_level = 3
+	#The maximum quality level naturally generated loot (e.g. chest loot) can have
+	# Default: 3
+	# Range: > 0
+	max_natural_loot_quality_level = 3
