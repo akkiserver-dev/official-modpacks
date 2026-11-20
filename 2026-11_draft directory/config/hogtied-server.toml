@@ -1,0 +1,128 @@
+#Server-side settings for Create: Hogtied
+[server]
+	#Maximum number of tow-ropes that can be attached to a single entity (animal/mob) at once.
+	#Default: 2  |  Min: 1  |  Max: 64
+	# Default: 2
+	# Range: 1 ~ 64
+	max_ropes_per_entity = 2
+	#Damage dealt to a mob or player hanging from a rope point above them, every hanging_interval_ticks. 0 = no damage.
+	#Default: 1  |  Min: 0  |  Max: 20
+	# Default: 1.0
+	# Range: 0.0 ~ 20.0
+	hanging_damage = 1.0
+	#How often (ticks) hanging deals its damage. 40 = every 2 seconds.
+	#Default: 40  |  Min: 10  |  Max: 1200
+	# Default: 40
+	# Range: 10 ~ 1200
+	hanging_interval_ticks = 40
+
+	#Settings for Vaskars Remains bodies on ropes (ignored when Remains isn't installed)
+	[server.bodies]
+		#Upward push per tick on each part of a tied body that is under water. 0 = bodies sink.
+		#Remains already slows sinking in water; around 0.01 makes a tied body float up until the rope is tight.
+		#Default: 0.012  |  Min: 0  |  Max: 0.1
+		# Default: 0.012
+		# Range: 0.0 ~ 0.1
+		buoyancy = 0.012
+		#If a tied body ends up this many blocks beyond the rope's length (a teleport, a very fast ship), the rope snaps
+		#and drops its item instead of yanking the body across the world.
+		#Default: 12  |  Min: 2  |  Max: 64
+		# Default: 12.0
+		# Range: 2.0 ~ 64.0
+		snap_distance = 12.0
+		#How hard a tight rope on a body pulls back on the rope point's ship or anchor.
+		#Default: 25  |  Min: 0  |  Max: 200
+		# Default: 25.0
+		# Range: 0.0 ~ 200.0
+		pull_strength = 25.0
+		#Bodies that aren't tied to anything also float up in water and drift at the surface, instead of sinking.
+		#A floating body stays a ragdoll until it drifts somewhere with ground under it.
+		float_untied = true
+
+	#Settings for the lasso
+	[server.lasso]
+		#Whether a lasso can catch other players (creative players can never be caught).
+		catch_players = true
+		#How far (blocks) the lasso's rope can stretch. A captive farther than this from the thrower is let go.
+		#Default: 24  |  Min: 4  |  Max: 64
+		# Default: 24.0
+		# Range: 4.0 ~ 64.0
+		max_range = 24.0
+		#Extra speed (blocks per tick) a fully wound-up throw adds. Higher throws farther.
+		#Default: 1.6  |  Min: 0.2  |  Max: 4
+		# Default: 1.6
+		# Range: 0.2 ~ 4.0
+		throw_speed = 1.6
+		#How many left-clicks a caught player needs to wriggle free. Clicks slowly wear off if they stop.
+		#Default: 40  |  Min: 1  |  Max: 500
+		# Default: 40
+		# Range: 1 ~ 500
+		wriggle_clicks = 40
+		#How long (ticks) a pulled-down captive stays ragdolled after the lasso lets go. Needs Sable Ragdolls.
+		#Default: 10  |  Min: 0  |  Max: 200
+		# Default: 10
+		# Range: 0 ~ 200
+		ragdoll_grace_ticks = 10
+		#How much of their normal walking speed a caught player or mob keeps.
+		#Default: 0.1  |  Min: 0  |  Max: 1
+		# Default: 0.1
+		# Range: 0.0 ~ 1.0
+		bound_speed = 0.1
+		#How hard reeling in pulls a ragdolled captive (needs Sable Ragdolls). 2 = twice as strong.
+		#Raise it if bodies can't be hauled up a block; lower it if they fly at you.
+		#Default: 1  |  Min: 0.1  |  Max: 10
+		# Default: 1.0
+		# Range: 0.1 ~ 10.0
+		pull_strength = 1.0
+		#Extra items that cut a pulled-down captive free at once, on top of the hogtied:cuts_rope item tag
+		#(shears, Farmer's Delight knives, Epic Fight daggers). Item ids, or tags starting with #.
+		#Example: ["minecraft:iron_sword", "#c:tools/knife"]
+		cutting_tools = []
+		#Mobs the lasso never turns into ragdolls (they're dragged like a lead instead), on top of the
+		#hogtied:no_ragdoll entity tag. Use it for mobs whose Sable Ragdolls ragdoll comes out broken, e.g. when
+		#another mod replaces their model. Entity ids, tags starting with #, or a whole mod as "modid:*".
+		#Example: ["minecraft:villager", "minecraft:horse", "icys-better-horses:*"]
+		no_ragdoll = []
+
+	#Persistent hogties (requires Sable Ragdolls)
+	[server.hogtie]
+		#Hogtie and cutting reach in blocks.
+		#Default: 3.0 | Min: 0.5 | Max: 6.0
+		# Default: 3.0
+		# Range: 0.5 ~ 6.0
+		reach = 3.0
+		#Ticks holding sneak and attack to hogtie; 0 is instant.
+		#Default: 10 | Min: 0 | Max: 1200
+		# Default: 10
+		# Range: 0 ~ 1200
+		windup_ticks = 10
+		#Clicks to escape; 0 disables wriggling.
+		#Default: 120 | Min: 0 | Max: 2000
+		# Default: 120
+		# Range: 0 ~ 2000
+		wriggle_clicks = 120
+		#Ticks holding attack with a cutting tool to free another captive.
+		#Default: 40 | Min: 0 | Max: 1200
+		# Default: 40
+		# Range: 0 ~ 1200
+		cut_hold_ticks = 40
+		#Rolling strength relative to free rolling; 0 disables rolling.
+		#Default: 0.25 | Min: 0.0 | Max: 1.0
+		# Default: 0.25
+		# Range: 0.0 ~ 1.0
+		roll_speed = 0.25
+		#Preserve ties across logout, dimension changes and restarts.
+		#Default: true | Values: true, false
+		keep_on_logout = true
+		#Allow dragging.
+		#Default: true | Values: true, false
+		drag = true
+		#Allow carrying.
+		#Default: true | Values: true, false
+		carry = true
+		#Drop on damage.
+		#Default: true | Values: true, false
+		carry_drop_on_damage = true
+		#Return a consumed lasso when freed.
+		#Default: true | Values: true, false
+		returns_lasso = true
